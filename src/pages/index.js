@@ -12,13 +12,13 @@ function HomePage({ data }) {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
   const { author } = data.site.siteMetadata;
   const categories = ['Hepsi', ...getUniqueCategories(posts)];
-  const featuredTabIndex = categories.findIndex((category) => category === 'featured');
+  const featuredTabIndex = categories.findIndex((category) => category === 'Önerilen');
   const [tabIndex, setTabIndex] = useState(featuredTabIndex === -1 ? 0 : featuredTabIndex);
   const onTabIndexChange = useCallback((e, value) => setTabIndex(value), []);
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Anasayfa" />
       <Bio author={author} />
       <PostTabs
         posts={posts}

@@ -12,7 +12,7 @@ function AboutPage({ data }) {
   const { timestamps, projects } = about;
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo title="Hakkımda" />
       <Bio author={author} />
       <TimeStampSection timestamps={timestamps} />
       <ProjectSection projects={projects} />

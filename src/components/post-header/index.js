@@ -19,7 +19,7 @@ function PostHeader({ post }) {
       <h1 className="title">{post.title}</h1>
       <div className="info">
         <div className="author">
-          posted by <strong>{post.author}</strong>,
+          <strong>{post.author}</strong>, tarafından yazıldı.
         </div>{' '}
         {post.date}
       </div>
